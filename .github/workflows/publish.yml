@@ -4,6 +4,9 @@ on:
       - 'plugins/**'
   repository_dispatch:
 
+permissions:
+  contents: write
+
 env:
   releaseName: v${{ github.run_number }}
 
