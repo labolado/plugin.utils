@@ -3,7 +3,7 @@ local metadata =
 	plugin =
 	{
 		format = 'jar',
-		manifest = 
+		manifest =
 		{
 		},
 	},
