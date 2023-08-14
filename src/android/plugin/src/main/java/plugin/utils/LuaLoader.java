@@ -103,6 +103,13 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
                 }
                 return 1;
             }
+        } else if (property.equals("isGooglePlayPC")) {
+            if (CoronaEnvironment.getApplicationContext() != null) {
+                PackageManager pm = CoronaEnvironment.getApplicationContext().getPackageManager();
+                boolean isPC = pm.hasSystemFeature("com.google.android.play.feature.HPE_EXPERIENCE");
+                L.pushBoolean(isPC);
+                return 1;
+            }
         }
 
         return 0;
